@@ -2,5 +2,15 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+import "./assets/global.css"
+import TheHeader from "./components/TheHeader.vue"
 
-createApp(App).use(store).use(router).mount("#app");
+const app = createApp(App)
+
+app.component('the-header', TheHeader)
+app.use(store)
+app.use(router)
+
+
+
+app.mount("#app");
